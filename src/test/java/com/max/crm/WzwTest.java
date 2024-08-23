@@ -10,12 +10,17 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
 
+@RunWith(SpringRunner.class)
 @SpringBootTest
 public class WzwTest {
+
+    @Resource
+    private UserMapper userMapper;
 
 
     @Test
     public void test01(){
-        System.out.println("Hello");
+
+        System.out.println(userMapper);
     }
 }
